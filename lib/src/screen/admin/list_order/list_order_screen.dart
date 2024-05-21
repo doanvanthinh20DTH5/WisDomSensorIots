@@ -19,7 +19,6 @@ class _ListOrderScreenState extends State<ListOrderScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Order List', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
             SizedBox(height: 16),
             TextField(
               onChanged: (value) => controller.searchOrders(value),
@@ -76,7 +75,7 @@ class OrderCard extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: ElevatedButton(
-                onPressed: () => controller.viewDetails(order.id),
+                onPressed: () => controller.navigateToviewDetails(order.id),
                 child: Text('Detail'),
               ),
             ),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wisdomsensoriots/src/screen/admin/add_service_package/add_service_package_controller.dart';
+import 'package:wisdomsensoriots/src/screen/admin/update_service_pack/update_service_pack_controller.dart';
 
-class AddServicePackageScreen extends StatefulWidget {
+class UpdateServicePackageScreen extends StatefulWidget {
   @override
-  _AddServicePackageScreenState createState() => _AddServicePackageScreenState();
+  _UpdateServicePackageScreenState createState() => _UpdateServicePackageScreenState();
 }
 
-class _AddServicePackageScreenState extends State<AddServicePackageScreen> {
-  final AddServicePackageController controller = Get.put(AddServicePackageController());
+class _UpdateServicePackageScreenState extends State<UpdateServicePackageScreen> {
+  final UpdateServicePackageController controller = Get.put(UpdateServicePackageController());
 
   @override
   Widget build(BuildContext context) {
@@ -54,8 +54,8 @@ class _AddServicePackageScreenState extends State<AddServicePackageScreen> {
               ),
               SizedBox(height: 32),
               ElevatedButton(
-                onPressed: () => controller.addServicePackage(),
-                child: Text('Add'),
+                onPressed: () => controller.updateServicePackage(),
+                child: Text('Save'),
               ),
             ],
           ),

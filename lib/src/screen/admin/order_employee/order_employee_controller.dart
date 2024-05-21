@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:wisdomsensoriots/src/screen/admin/detail_order/detail_order_screen.dart';
 
 class OrderEmployeeController extends GetxController {
   var selectedAll = false.obs;
@@ -23,7 +24,7 @@ class OrderEmployeeController extends GetxController {
   }
 
   void viewDetails(int orderId) {
-    // Implement view details functionality
+    Get.to(DetailOrderScreen());
   }
 }
 

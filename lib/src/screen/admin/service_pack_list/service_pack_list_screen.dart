@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'promotion_list_controller.dart';
+import 'package:wisdomsensoriots/src/screen/admin/service_pack_list/service_pack_list_controller.dart';
 
-class PromotionListScreen extends StatefulWidget {
+class ServicePackListScreen extends StatefulWidget {
   @override
-  _PromotionListScreenState createState() => _PromotionListScreenState();
+  _ServiceListScreenState createState() => _ServiceListScreenState();
 }
 
-class _PromotionListScreenState extends State<PromotionListScreen> {
-  final PromotionListController controller = Get.put(PromotionListController());
+class _ServiceListScreenState extends State<ServicePackListScreen> {
+  final ServicePackListController controller = Get.put(ServicePackListController());
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +18,7 @@ class _PromotionListScreenState extends State<PromotionListScreen> {
         actions: [
           IconButton(
             onPressed: () {
-              controller.goToAddPromotionScreen();
-
+                controller.goToAddServicePackageScreen();
             },
             icon: Icon(Icons.add),
           ),
@@ -31,7 +30,7 @@ class _PromotionListScreenState extends State<PromotionListScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Promotion List',
+              'Service Package List',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
@@ -63,6 +62,7 @@ class _PromotionListScreenState extends State<PromotionListScreen> {
                 },
               ),
             ),
+
           ],
         ),
       ),
@@ -90,7 +90,7 @@ class PromotionItem extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              'Details of the promotion...', // Thay đổi văn bản này bằng chi tiết của ưu đãi
+              'Automotive sensors are devices used to sense and collect information about the vehicles surroundings to support autopilot and improve driving safety.', // Thay đổi văn bản này bằng chi tiết của ưu đãi
               style: TextStyle(fontSize: 14),
             ),
           ],

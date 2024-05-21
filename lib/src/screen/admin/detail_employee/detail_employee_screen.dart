@@ -58,19 +58,18 @@ class _DetailEmployeeScreenState extends State<DetailEmployeeScreen> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    // Handle orders button pressed
+                    controller.navigateToOrder();
                   },
                   child: Text('Orders'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Handle contact button pressed
                   },
                   child: Text('Contact'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Handle edit button pressed
+                    controller.navigateToEdit();
                   },
                   child: Text('Edit'),
                 ),

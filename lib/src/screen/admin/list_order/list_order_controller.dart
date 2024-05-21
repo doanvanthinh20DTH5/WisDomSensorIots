@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:wisdomsensoriots/src/screen/admin/detail_order/detail_order_screen.dart';
 
 class ListOrderController extends GetxController {
   var searchQuery = ''.obs;
@@ -32,7 +33,8 @@ class ListOrderController extends GetxController {
     orders.assignAll(orders.where((order) => order.customerName.contains(query)));
   }
 
-  void viewDetails(int orderId) {
+  void navigateToviewDetails(int orderId) {
+      Get.to(DetailOrderScreen());
   }
 }
 

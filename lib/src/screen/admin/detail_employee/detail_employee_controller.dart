@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:wisdomsensoriots/src/screen/admin/edit_employee/edit_employee_screen.dart';
+import 'package:wisdomsensoriots/src/screen/admin/order_employee/order_employee_screen.dart';
 
 class Employee {
   final String name;
@@ -39,5 +41,11 @@ class DetailEmployeeController extends GetxController {
 
   void setEmployee(Employee emp) {
     employee.value = emp;
+  }
+  void navigateToEdit() {
+    Get.to(EditEmployeeScreen());
+  }
+  void navigateToOrder() {
+    Get.to(OrderEmployeeScreen());
   }
 }
