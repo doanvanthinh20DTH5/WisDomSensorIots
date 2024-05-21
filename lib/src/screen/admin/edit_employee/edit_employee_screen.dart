@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:wisdomsensoriots/src/screen/admin/edit_employee/edit_employee_controller.dart';
@@ -31,7 +33,8 @@ class _EditEmployeeScreenState extends State<EditEmployeeScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage('assets/avatar.png'), // Replace with your image asset
+                      backgroundImage: AssetImage(
+                          'assets/avatar.png'), // Replace with your image asset
                     ),
                   ),
                   Expanded(
@@ -40,7 +43,8 @@ class _EditEmployeeScreenState extends State<EditEmployeeScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Obx(() => Text('Username: ${controller.name.value}', style: TextStyle(fontSize: 16))),
+                          Obx(() => Text('Username: ${controller.name.value}',
+                              style: TextStyle(fontSize: 16))),
                           ElevatedButton(
                             onPressed: () {
                               // Implement edit profile functionality
@@ -60,7 +64,8 @@ class _EditEmployeeScreenState extends State<EditEmployeeScreen> {
             ),
             SizedBox(height: 16),
             Text('My Profile', style: TextStyle(fontSize: 24)),
-            Text('Manage and protect your account', style: TextStyle(fontSize: 16)),
+            Text('Manage and protect your account',
+                style: TextStyle(fontSize: 16)),
             SizedBox(height: 16),
             buildTextField('Name', controller.name),
             buildTextField('Email', controller.email),
@@ -79,7 +84,7 @@ class _EditEmployeeScreenState extends State<EditEmployeeScreen> {
                 ElevatedButton(
                   onPressed: controller.deleteProfile,
                   child: Text('Delete'),
-                  style: ElevatedButton.styleFrom(primary: Colors.red),
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 ),
               ],
             ),
@@ -91,47 +96,44 @@ class _EditEmployeeScreenState extends State<EditEmployeeScreen> {
 
   Widget buildTextField(String label, RxString value) {
     return Obx(() => TextField(
-      decoration: InputDecoration(labelText: label),
-      controller: TextEditingController(text: value.value),
-      onChanged: (newValue) => value.value = newValue,
-    ));
+          decoration: InputDecoration(labelText: label),
+          controller: TextEditingController(text: value.value),
+          onChanged: (newValue) => value.value = newValue,
+        ));
   }
 
   Widget buildGenderSelection() {
     return Obx(() => Row(
-      children: [
-        Text('Gender:'),
-        Radio(
-          value: 'Male',
-          groupValue: controller.gender.value,
-          onChanged: (value) {
-
-          },
-        ),
-        Text('Male'),
-        Radio(
-          value: 'Female',
-          groupValue: controller.gender.value,
-          onChanged: (value) {
-          },
-        ),
-        Text('Female'),
-      ],
-    ));
+          children: [
+            Text('Gender:'),
+            Radio(
+              value: 'Male',
+              groupValue: controller.gender.value,
+              onChanged: (value) {},
+            ),
+            Text('Male'),
+            Radio(
+              value: 'Female',
+              groupValue: controller.gender.value,
+              onChanged: (value) {},
+            ),
+            Text('Female'),
+          ],
+        ));
   }
 
   Widget buildBirthdaySelection() {
     return Obx(() => Row(
-      children: [
-        Text('Birthday: '),
-        TextButton(
-          onPressed: () async {
-            DateTime pickedDate ;
-
-          },
-          child: Text('${controller.birthday.value.toLocal()}'.split(' ')[0]),
-        ),
-      ],
-    ));
+          children: [
+            Text('Birthday: '),
+            TextButton(
+              onPressed: () async {
+                DateTime pickedDate;
+              },
+              child:
+                  Text('${controller.birthday.value.toLocal()}'.split(' ')[0]),
+            ),
+          ],
+        ));
   }
 }

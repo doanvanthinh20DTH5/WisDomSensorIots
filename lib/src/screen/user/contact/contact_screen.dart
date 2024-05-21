@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:wisdomsensoriots/src/screen/user/contact/contact_controller.dart';
 
-
 class ContactScreen extends StatefulWidget {
   @override
   _ContactScreenState createState() => _ContactScreenState();
@@ -14,7 +13,6 @@ class _ContactScreenState extends State<ContactScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -29,7 +27,8 @@ class _ContactScreenState extends State<ContactScreen> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                   prefixIcon: Icon(Icons.search),
                 ),
               ),

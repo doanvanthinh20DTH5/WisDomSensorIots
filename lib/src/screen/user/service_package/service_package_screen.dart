@@ -8,7 +8,8 @@ class ServicePackageScreen extends StatefulWidget {
 }
 
 class _ServicePackageScreenState extends State<ServicePackageScreen> {
-  final ServicePackageController controller = Get.put(ServicePackageController());
+  final ServicePackageController controller =
+      Get.put(ServicePackageController());
 
   @override
   Widget build(BuildContext context) {
@@ -39,14 +40,15 @@ class _ServicePackageScreenState extends State<ServicePackageScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Obx(() => Text(
-                          controller.title.value,
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                        )),
+                              controller.title.value,
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
+                            )),
                         SizedBox(height: 8),
                         Obx(() => Text(
-                          controller.description.value,
-                          style: TextStyle(fontSize: 12),
-                        )),
+                              controller.description.value,
+                              style: TextStyle(fontSize: 12),
+                            )),
                         Expanded(
                           child: Align(
                             alignment: Alignment.bottomRight,
@@ -56,10 +58,11 @@ class _ServicePackageScreenState extends State<ServicePackageScreen> {
                               },
                               child: Text('Buy Now'),
                               style: TextButton.styleFrom(
-                                minimumSize: Size(100, 45), // Set button width and height
+                                foregroundColor: Colors.white,
+                                minimumSize: Size(
+                                    100, 45), // Set button width and height
                                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                                 backgroundColor: Colors.blue,
-                                primary: Colors.white,
                               ),
                             ),
                           ),

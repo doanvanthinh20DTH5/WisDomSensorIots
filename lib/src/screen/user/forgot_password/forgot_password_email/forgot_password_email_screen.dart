@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:wisdomsensoriots/src/screen/user/forgot_password/forgot_password_email/forgot_passwprd_email_controller.dart';
 
-
 class ForgotPasswordEmailScreen extends StatefulWidget {
   @override
-  _ForgotPasswordEmailScreenState createState() => _ForgotPasswordEmailScreenState();
+  _ForgotPasswordEmailScreenState createState() =>
+      _ForgotPasswordEmailScreenState();
 }
 
 class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
-  final ForgotPasswordEmailController controller = Get.put(ForgotPasswordEmailController());
+  final ForgotPasswordEmailController controller =
+      Get.put(ForgotPasswordEmailController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -80,7 +80,7 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
                       onPressed: controller.sendAgain,
                       child: Text('Send Again'),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.grey, // Màu xám cho nút gửi lại
+                        backgroundColor: Colors.grey, // Màu xám cho nút gửi lại
                       ),
                     ),
                   ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:wisdomsensoriots/src/screen/user/purchase/purchase_controller.dart';
+import 'package:wisdomsensoriots/src/screen/user/purchase/purchase_detail_screen.dart';
 
 class PurchaseScreen extends StatefulWidget {
   @override
@@ -78,7 +79,14 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ElevatedButton(
-                        onPressed: controller.reviewOrder,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PurchaseDetailScreen(),
+                            ),
+                          );
+                        },
                         child: Text('Review'),
                         style: ElevatedButton.styleFrom(
                           minimumSize: Size(150, 45),
@@ -89,7 +97,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                         child: Text('Buy Again'),
                         style: ElevatedButton.styleFrom(
                           minimumSize: Size(150, 45),
-                          primary: Colors.green,
+                          backgroundColor: Colors.green,
                         ),
                       ),
                     ],
